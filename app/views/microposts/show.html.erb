@@ -1,0 +1,19 @@
+<div class="container">
+
+    <ul class="nav nav-tabs nav-inverse">
+      <li><a href="#BlogList" data-toggle="tab">BlogList</a></li>
+      <li><a href="#Content" data-toggle="tab">Profile</a></li>
+      <li><a href="#NewBlog" data-toggle="tab">NewBlog</a></li>
+      <li><a href="#settings" data-toggle="tab">Settings</a></li>
+    </ul>
+    <div class="tab-content">
+              <div class="tab-pane active" id="BlogList">
+                <%= render 'microposts/blogList'%>
+              </div>
+              <div class="tab-pane" id="Content"></div>
+              <div class="tab-pane" id="NewBlog"><%= render 'microposts/edit'%></div>
+              <div class="tab-pane" id="settings">settings</div>
+    </div>
+
+</div>
+<%= render 'users/login'%>

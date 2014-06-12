@@ -1,0 +1,69 @@
+<div class="homebanner">
+  <div id="myCarousel" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="item active">
+        <img class="banner" src=<%= asset_path('sports.jpg') %> >
+        <div class="container banner_intro">
+          <h3>运动，畅享精彩人生</h3>
+          <p>Happiness is not about being immortal nor having food or rights in one's hand. It’s about having each tiny wish come true
+            ,<br> or having something to eat when you are hungry or having someone's love when you need lov</p>
+          <%= link_to "注册畅享运动",signup_path, class:"btn btn-little btn-primary"%>
+          <br>
+        </div>
+      </div>
+      <div class="item">
+        <img class="banner" src=<%= asset_path('friends.jpg') %> >
+        <div class="container banner_intro">
+          <h3>交友，寻找心灵伴侣</h3>
+          <p>Happiness is not about being immortal nor having food or rights in one's hand. It’s about having each tiny wish come true
+            ,<br> or having something to eat when you are hungry or having someone's love when you need lov</p>
+
+          <%= link_to "注册跟我做朋友",signup_path, class:"btn btn-little btn-success"%>
+          <br/>
+
+        </div>
+      </div>
+      <div class="item">
+        <img class="banner" src=<%= asset_path('tavelling.jpg') %> >
+        <div class="container banner_intro">
+          <h3>旅行，看不一样的风景</h3>
+          <p>Happiness is not about being immortal nor having food or rights in one's hand. It’s about having each tiny wish come true
+            ,<br> or having something to eat when you are hungry or having someone's love when you need love.</p>
+          <%= link_to "注册分享旅程", signup_path, class:"btn btn-little btn-warning"%>
+          <br/>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+
+  </div>
+
+
+  <div class="container">
+
+    <div class="row">
+      <div class="span4"><span class="label label-important">爱上旅行</span>.One is always on a strange road, watching strange scenery and listening to strange music. Then one day, you will find that the things you try hard to forget are already gone.
+        一个人总要走陌生的路，看陌生的风景，听陌生的歌，然后在某个不经意的瞬间，你会发现，原本是费尽心机想要忘记的事情真的就那么忘记了。 </div>
+      <div class="span4"><span class="label label-info">爱上生活</span>Happiness is not about being immortal nor having food or rights in one's hand. It’s about having each tiny wish come true, or having something to eat when you are hungry or having someone's love when you need love.
+        幸福，不是长生不老，不是大鱼大肉，不是权倾朝野。幸福是每一个微小的生活愿望达成。当你想吃的时候有得吃，想被爱的时候有人来爱你。 </div>
+      <div class="span4"><span class="label label-success">爱上自然</span>One is always on a strange road, watching strange scenery and listening to strange music. Then one day, you will find that the things you try hard to forget are already gone.
+        一个人总要走陌生的路，看陌生的风景，听陌生的歌，然后在某个不经意的瞬间，你会发现，原本是费尽心机想要忘记的事情真的就那么忘记了。 </div>
+    </div>
+    <br>
+    <br>
+    <div class="row ">
+      <div class="span2"><img class="img-rounded circle-img" src=<%= asset_path('banner.jpeg') %>></div>
+      <div class="span5 "><span class="label label-warning">爱上奋斗</span>One is always on a strange road, watching strange scenery and listening to strange music. Then one day, you will find that the things you try hard to forget are already gone.
+        一个人总要走陌生的路，看陌生的风景，听陌生的歌，然后在某个不经意的瞬间，你会发现，原本是费尽心机想要忘记的事情真的就那么忘记了。 </div>
+      <div class="span5 "><span class="label label-inverse">爱上冷静</span>.I love and am used to keeping a distance with those changed things.Only in this way can I know what will not be abandoned by time. Forexample, when you love someone, changes are all around. Then I stepbackward and watching it silently, then I see the true feelings.
+        我喜欢并习惯了对变化的东西保持着距离，这样才会知道什么是最不会被时间抛弃的准则。比如爱一个人，充满变数，我于是后退一步，静静的看着，直到看见真诚的感情。
+      </div>
+    </div>
+
+  </div>
+
+<%= render 'users/login'%>
+</div>
+
+

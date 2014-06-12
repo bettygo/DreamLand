@@ -1,0 +1,16 @@
+<div class="container">
+      <div class="row">
+        <div class="span8"><%= render 'signin'%></div>
+        <div class="span4 signLeft">
+          <%= render 'signIntro'%>
+        </div>
+      </div>
+    <table>
+      <tr>
+        <%for column in User.content_columns%>
+        <th><%= column.human_name%></th>
+            <%end%>
+      </tr>
+    </table>
+  <%= render 'users/login'%>
+</div>

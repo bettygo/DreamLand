@@ -1,0 +1,54 @@
+<!--[form:user]-->
+<form class="form-horizontal" name="user" action="create">
+  <fieldset>
+    <legend>Sign as DreamLander</legend>
+    <div class="control-group">
+      <label class="control-label" for="user_name">Name:</label>
+      <div class="controls">
+        <input id="user_name" name="user[name]" type="text" />
+      </div>
+    </div>
+  <div class="control-group">
+    <label class="control-label" for="user_email">Email:</label>
+    <div class="controls">
+      <input id="user_email" name="user[email]" type="text" />
+    </div>
+  </div>
+
+
+  <div class="control-group">
+    <label class="control-label" >Sex:</label>
+    <div class="controls">
+      <%=radio_button 'user','sex','male'%>male
+      <%=radio_button 'user','sex','female'%>female
+
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="user_password">Password:</label>
+    <div class="controls">
+      <input id="user_password" name="user[password]"
+             type="password" />
+
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="user_password_confirmation">RepeatPwd:</label>
+    <div class="controls">
+      <input id="user_password_confirmation"
+             name="user[password_confirmation]" type="password" />
+    </div>
+  </div>
+
+  <div class="control-group">
+    <div class="controls">
+      <label class="checkbox">
+        <input type="checkbox"> Remember me
+      </label>
+      <button type="submit" class="btn btn-primary">SIGN IN</button>
+      <button type="reset" class="btn btn-danger">RESET</button>
+    </div>
+  </div>
+      </fieldset>
+</form>
+<!--[eoform:user]-->

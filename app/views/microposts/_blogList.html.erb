@@ -1,0 +1,9 @@
+<table>
+  <tr>
+  <% for column in Micropost.content_columns%>
+
+        <th><%= column.human_name%></th>
+
+  <%end%>
+  </tr>
+</table>
