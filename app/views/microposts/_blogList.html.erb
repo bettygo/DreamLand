@@ -1,9 +1,33 @@
 <table>
-  <tr>
-  <% for column in Micropost.content_columns%>
+  <table class="table table-striped">
 
-        <th><%= column.human_name%></th>
+    <tr>
+      <td>id</td>
+      <td>title</td>
+      <td>author</td>
+      <th colspan="3">edit</th>
+    </tr>
+    <% @micropost.each do |micropost| %>
+        <tr>
+          <td>
+            <img src=<%= asset_path 'point.png' %>>
+          </td>
 
-  <%end%>
-  </tr>
+          <td>
+            <%= micropost.title %>
+
+          </td>
+          <td>
+            <%= micropost.author %>
+          </td>
+
+
+          <td><%= link_to("to details", {:controller => 'microposts', :action => 'showContent', :id => micropost.id}) %></td>
+          <td><%= link_to("edit", {:controller => 'microposts', :action => 'showContent', :id => micropost.id}) %></td>
+          <td><%= link_to("destroy", {:controller => 'microposts', :action => 'showContent', :id => micropost.id}) %>
+          </td>
+        </tr>
+    <% end %>
+
+  </table>
 </table>

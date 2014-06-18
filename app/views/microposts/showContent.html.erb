@@ -1,0 +1,36 @@
+<div class="container ctntbg">
+  <span>
+        <ul class="breadcrumb ">
+          <li><%= link_to 'Home', home_path %> <span class="divider">/</span></li>
+          <li><%= link_to 'BlogList', microposts_show_path %> <span class="divider">/</span></li>
+
+          <li class="active">Passage</li>
+        </ul>
+  </span>
+
+  <div class="row">
+    <div class="span8">
+      <h1 class="passage"><%= @micropost.title %></h1>
+
+      <div class="passage"> <%= @micropost.content %> </div>
+    </div>
+    <div class="span4">
+      <ul class="thumbnails laugh">
+        <li class="span4">
+          <a href="#" class="thumbnail span2">
+            <img src=<%= asset_path 'blog1.gif' %> alt="">
+          </a>
+        </li>
+        <li class="span4">
+          <a href="#" class="thumbnail span2 ">
+            <img src=<%= asset_path 'blog.gif' %> alt="">
+          </a>
+          <div style="padding-left: 10px">u r doomed 2 b single!</div>
+        </li>
+
+      </ul>
+    </div>
+
+
+  </div>
+</div>

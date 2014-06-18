@@ -1,17 +1,32 @@
 DreamLand::Application.routes.draw do
+  resources :users, only: [:new, :create, :destroy]
+
+  resources :sessions, only: [:create, :new, :destroy]
+
+
   get "microposts/release"
   get "microposts/show"
-root 'static_pages#home'
-get 'home' => 'static_pages#home'
+  root 'static_pages#home'
+  get 'home' => 'static_pages#home'
 
-  match 'release',to:"microposts#release",via:'post'
-  match 'show',to:"microposts#show",via:'get'
+  match 'release', to: "microposts#release", via: 'post'
+  match 'blog', to: "microposts#show", via: 'get'
+  get 'microposts/new_blog'
+  post 'microposts/new_blog'
+  get 'microposts/showContent'
 
-  match 'login',to:"users#login",via:'get'
-  match 'signup',to:"users#sign_up",via:'get'
-  match 'create',to:"users#create",via:'get'
-  match 'about', to: "static_pages#about",via:'get'
-  resources :users;
+
+  match 'signUp', to: "users#new", via: 'get'
+  get "users/index"
+  match 'editProfile', to: "users#change", via: 'get'
+  match 'new_user', to: "users#new_user", via: [:get, :post]
+  get 'users/show'
+
+
+  match 'login', to: 'sessions#new', via: 'get'
+  match 'logout', to: 'sessions#destroy', via: 'delete'
+  get "sessions/login"
+ match '/sessions', to: "sessions#create",via:'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

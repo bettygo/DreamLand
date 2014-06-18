@@ -1,0 +1,89 @@
+
+
+  <link href="style.css" rel="stylesheet">
+
+
+</head>
+<body>
+<div class="container ctntbg">
+  <div class="page-header">
+    <h1>Welcome New DreamLander!</h1>
+  </div>
+  <div class="row">
+    <div id="maincontent" class="span8">
+
+      <div class="tabbable">
+        <div class="tab-content">
+          <div id="demo" class="tab-pane active">
+            <div class="alert alert-success">
+              <h4>attention</h4>
+              <ul>
+                <li>This website is for friends having the same passion for dream. So I will call you a dreamlander</li>
+                <li>you must use the true email to register, or you will miss something important.</li>
+                <li>Share your ideas with other dreamlanders. No shit word is allowed here.</li>
+              </ul>
+            </div><!-- notes .alert -->
+            <form  action="/new_user" id="user" class="form-horizontal" >
+              <fieldset>
+                <legend>Input your information here <small>(Keep it in mind.)</small></legend>
+
+                <div class="control-group">
+                  <label class="control-label" for="user_name">Your Name</label>
+                  <div class="controls">
+                    <input type="text" class="input-xlarge" name="name" id="name">
+                  </div>
+                </div>
+                <div class="control-group">
+                  <label class="control-label" for="email">Email Address</label>
+                  <div class="controls">
+                    <input type="text" class="input-xlarge" name="email" id="email">
+                  </div>
+                </div><div class="control-group">
+                  <label class="control-label" for="password">Password</label>
+                  <div class="controls">
+                    <input type="password" class="input-xlarge" name="password" id="password">
+                  </div>
+                </div><div class="control-group">
+                  <label class="control-label" for="rpassword">password confirmation</label>
+                  <div class="controls">
+                    <input type="password" class="input-xlarge" name="rpassword" id="rpassword">
+                  </div>
+                </div>
+                <div class="control-group">
+                  <label class="control-label" for="sex">sex</label>
+                  <div class="controls">
+                    <input type='radio' name="sex" id="sex" value="female">Female
+                    <input type='radio' name="sex" id="sex" value="male" checked="true">Male
+                  </div>
+                </div>
+                <div class="control-group">
+                  <label class="control-label" for="message">Your Message</label>
+                  <div class="controls">
+                    <textarea class="input-xlarge" name="message" id="message" rows="3"></textarea>
+                  </div>
+                </div>
+                <div class="form-actions">
+                  <input type="submit" class="btn btn-primary ">
+                  <button type="reset" class="btn btn-warning">Cancel</button>
+                </div>
+              </fieldset>
+            </form>
+          </div><!-- .tab-pane -->
+        </div><!-- .tab-content -->
+      </div><!-- .tabbable -->
+
+    </div><!-- .span -->
+    <div class=" container span4">
+      <%= render 'users/creator' %>
+    </div>
+  </div><!-- .row -->
+
+
+
+</div> <!-- .container -->
+
+
+
+
+</body>
+</html>
